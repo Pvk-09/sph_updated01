@@ -1,0 +1,36 @@
+﻿<Window x:Class="sph_test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sph_test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1000" Width="1400" Background="{x:Null}">
+    <Canvas x:Name="m_top_canvas" HorizontalAlignment="Left" Height="940" Margin="5,-13,-32.4,0" VerticalAlignment="Top" Width="1421" Background="#FF857F7F" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="PTS_Open" Content="PTS Open" Canvas.Left="10" Width="96" Height="38" FontSize="14" Click="PTS_Open_Click" Canvas.Top="15"/>
+        <Button x:Name="m_file_create" Content="File Create" Canvas.Left="10" Canvas.Top="114" Width="96" Height="37" FontSize="14" Click="m_file_create_Click" RenderTransformOrigin="0.5,0.881"/>
+        <Button x:Name="PTS_Open_Copy" Content="Refine &#xA;Boundary" Canvas.Left="10" Width="96" Height="48" FontSize="14" Click="RefineBoundary" Canvas.Top="61"/>
+        <Canvas x:Name="m_drawing_canvas" Height="930" Canvas.Left="180" Canvas.Top="10" Width="1142" Background="White"/>
+        <TextBox x:Name="m_touch_textbox" Height="19" Canvas.Left="10" TextWrapping="Wrap" Text="0.01" Canvas.Top="192" Width="105" Background="White"/>
+        <TextBlock x:Name="TouchingAllowanceText" Height="33" TextWrapping="Wrap" Text="Touch Tolerance Fraction" Canvas.Top="154" Width="118" Canvas.Left="10" Foreground="White" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-2.291"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.36"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="textBlock1" Height="37" Canvas.Left="10" TextWrapping="Wrap" Text="Overlap Tolerance Fraction" Canvas.Top="225" Width="96" Foreground="White"/>
+        <TextBox x:Name="m_overlap_textbox" Height="19" Canvas.Left="6" TextWrapping="Wrap" Text="0.01" Canvas.Top="267" Width="109"/>
+        <CheckBox x:Name="m_spike_removal" Content="Remove Spikes" Canvas.Left="10" Canvas.Top="303" Foreground="White"/>
+        <CheckBox x:Name="m_number_display" Content="Display Numbers" Canvas.Left="10" Canvas.Top="336" Foreground="White"/>
+        <CheckBox x:Name="m_bbox_display" Content="Bounding Box Display" Canvas.Left="10" Canvas.Top="365" Foreground="White"/>
+        <CheckBox x:Name="m_remove_collinear_points" Content="Remove Collinear Points" Canvas.Left="10" Canvas.Top="394" Foreground="White"/>
+    </Canvas>
+
+
+
+
+</Window>
